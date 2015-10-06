@@ -41,6 +41,7 @@ public class FcContextService implements IFcContextService {
 		context.username = user.Username;
 		context.isSuperUser = user.IsPrmSuperUser;
 		context.isPartnerUser = false;
+        context.country = user.Country;
 		context.currencyCode = user.CurrencyIsoCode;
 		context.languageCode = user.LanguageLocaleKey;
 		context.localeCode = user.LocaleSidKey;
@@ -50,9 +51,9 @@ public class FcContextService implements IFcContextService {
 		context.dealerOwnerId = account.OwnerId;
 		context.dealerApprovalStatus = account.Approval_Status__c;
 		context.dealerEbossDealerId = account.eBoss_Dealer_ID__c;
-		context.dealerCountry = account.CurrencyIsoCode;
-		context.dealerCurrency = account.Dealer_Tier__c;
-		context.dealerTier = account.Commission_Type__c;
+		context.dealerCountry = account.Country__c;
+        context.dealerCurrency = account.CurrencyIsoCode;
+		context.dealerTier = account.Dealer_Tier__c;
 		context.dealerCommissionType = account.Commission_Type__c;
 		context.dealerMinCommissionPercent = account.Min_Commission_Percent__c;
 		context.dealerMaxCommissionPercent = account.Max_Commission_Percent__c;
@@ -76,6 +77,7 @@ public class FcContextService implements IFcContextService {
 		context.username = user.Username;
 		context.isSuperUser = user.IsPrmSuperUser;
 		context.isPartnerUser = false;
+        context.country = user.Country;
 		context.currencyCode = user.CurrencyIsoCode;
 		context.languageCode = user.LanguageLocaleKey;
 		context.localeCode = user.LocaleSidKey;

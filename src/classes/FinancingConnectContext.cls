@@ -12,6 +12,7 @@ public class FinancingConnectContext {
 	public String username { get; set; }
 	public Boolean isSuperUser { get; set; }
 	public Boolean isPartnerUser { get; set; }
+    public String country { get; set; }
 	public String currencyCode { get; set; }
 	public String languageCode { get; set; }
 	public String localeCode { get; set; }

@@ -15,23 +15,20 @@
 	<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.FinancingConnect, 'dist/app.bundle.css')}"/>
 </head>
 <body ng-controller="AppController" ng-init="getUserName()">
-	<div id="fc-container" ng-cloak="true">
+	
+  <div id="fc-container" ng-cloak="true">
 		<sidebar id="fc-sidebar"></sidebar>
-		<div id="fc-content" class="container-fluid">
+    <div id="fc-content" class="container-fluid">
 			<div class="row">
 				<div id="fc-nav-section" class="col-xs-12">
-					<a sidebar-toggle="true" href="#" class="glyphicon glyphicon-menu-hamburger fc-toggle-sidebar"></a>
-					<div class="input-group fc-search-box" ng-controller="SearchController">
-						<span class="input-group-addon">
-							<i class="glyphicon glyphicon-search"></i>
-						</span>
-						<input type="text" class="form-control" placeholder="Search Deals or Quotes" ng-model="searchInput" ng-change="search(searchInput)" />
-					</div>
+          <a sidebar-toggle="true" href="#" class="glyphicon glyphicon-menu-hamburger fc-toggle-sidebar"></a>
+          <search id="fc-search"></search>
 				</div>
 			</div>
 			<div ng-view="true" class="row"></div>
 		</div>
 	</div>
+
 	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'jquery/dist/jquery.min.js')}"></script>
 	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'angular/angular.min.js')}"></script>
 	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'angular-route/angular-route.min.js')}"></script>

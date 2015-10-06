@@ -1,0 +1,42 @@
+<apex:page controller="FinancingConnectController" 
+	extensions="FcContextControllerExtension"
+	docType="html-5.0" 
+	standardStylesheets="false" 
+	applyBodyTag="false" 
+	applyHtmlTag="false" 
+	showHeader="false" 
+	sidebar="false">
+<html ng-app="financingConnect">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Financing Connect</title>
+	<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.bower_components, 'bootstrap/dist/css/bootstrap.min.css')}"/>
+	<link rel="stylesheet" type="text/css" href="{!URLFOR($Resource.FinancingConnect, 'dist/app.bundle.css')}"/>
+</head>
+<body ng-controller="AppController" ng-init="getUserName()">
+	<div id="fc-container" ng-cloak="true">
+		<sidebar id="fc-sidebar"></sidebar>
+		<div id="fc-content" class="container-fluid">
+			<div class="row">
+				<div id="fc-nav-section" class="col-xs-12">
+					<a sidebar-toggle="true" href="#" class="glyphicon glyphicon-menu-hamburger fc-toggle-sidebar"></a>
+					<div class="input-group fc-search-box" ng-controller="SearchController">
+						<span class="input-group-addon">
+							<i class="glyphicon glyphicon-search"></i>
+						</span>
+						<input type="text" class="form-control" placeholder="Search Deals or Quotes" ng-model="searchInput" ng-change="search(searchInput)" />
+					</div>
+				</div>
+			</div>
+			<div ng-view="true" class="row"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'jquery/dist/jquery.min.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'angular/angular.min.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'angular-route/angular-route.min.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.bower_components, 'bootstrap/dist/js/bootstrap.min.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.FinancingConnect, 'dist/app.bundle.js')}"></script>
+</body>
+</html>
+</apex:page>

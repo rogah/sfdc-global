@@ -6,9 +6,12 @@
 .sublime-project
 .tm_properties
 Referenced Packages/
+resource-bundles/
 build.properties
 buildx.xml
 config/
 salesforce.schema
 target/
 temp/
+
+node_modules/

@@ -11,7 +11,6 @@ public class FcContextService implements IFcContextService {
 	public FinancingConnectContext getContextFor(Id userId) {
 
 		User user = this.userRepository.getUserById(userId);
-		System.debug(user);
 
 		Specification standardUserSpec = new StandardUserSpecification();
 		Specification dfsSalesTypeSpec = new FcDfsSalesTypeSpecification();
@@ -20,7 +19,6 @@ public class FcContextService implements IFcContextService {
 
 		if (dfsSalesUserSpec.isSatisfiedBy(user)) {
 			Account account = accountRepository.getAccountById(user.Account_Id__c);
-			System.debug(account);
 			if (account == null)
 				return createInvalidUserContext(user);
 			return createUserContext(user, account);

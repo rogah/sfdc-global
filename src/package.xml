@@ -7,7 +7,6 @@
 		<members>CompositeSpecification</members>
 		<members>FcAccountRepository</members>
 		<members>FcConstants</members>
-		<members>FcContextController</members>
 		<members>FcContextControllerExtension</members>
 		<members>FcContextService</members>
 		<members>FcDfsSalesTypeSpecification</members>

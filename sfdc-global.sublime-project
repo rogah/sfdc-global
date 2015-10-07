@@ -3,26 +3,26 @@
         {
             "folder_exclude_patterns": [
                 "config/.symbols"
-            ],
+            ], 
             "path": "."
         }
-    ],
+    ], 
     "settings": {
         "auto_complete_triggers": [
             {
-                "characters": ".",
+                "characters": ".", 
                 "selector": "source - comment"
-            },
+            }, 
             {
-                "characters": ":",
+                "characters": ":", 
                 "selector": "text.html - comment"
-            },
+            }, 
             {
-                "characters": "<",
+                "characters": "<", 
                 "selector": "text.html - comment"
-            },
+            }, 
             {
-                "characters": " ",
+                "characters": " ", 
                 "selector": "text.html - comment"
             }
         ]

@@ -34,14 +34,17 @@ gulp.task('beautify:js', ['lint'], function () {
 });
 
 gulp.task('js', ['beautify:js'], function () {
-  return browserify('./resource-bundles/FinancingConnect.resource/src/app/app.js', {
+  return browserify({
+      entries: './resource-bundles/FinancingConnect.resource/src/app/app.js',
       debug: true
     }).bundle()
     .pipe(source('app.bundle.js'))
     .pipe(buffer())
-    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sourcemaps.init({
+      loadMaps: true
+    }))
     .pipe(plugins.ngAnnotate())
-    //.pipe(plugins.uglify())
+    .pipe(plugins.uglify())
     .on('error', plugins.util.log)
     .pipe(plugins.sourcemaps.write('./maps'))
     .pipe(gulp.dest('./resource-bundles/FinancingConnect.resource/dist'));

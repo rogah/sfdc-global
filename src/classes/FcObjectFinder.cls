@@ -21,7 +21,8 @@ public with sharing class FcObjectFinder implements IFcObjectFinder {
 						Opp_Partner_Owner__c
 					WHERE RecordType.Name IN ('New Application Stage', 'Credit Check Stage') 
 						AND Status__c NOT IN ('Quote Expired', 'Expired', 'Cancelled')
-						AND Customer_Lessee__r.Country__c = :context.dealerCountry),
+						AND Customer_Lessee__r.Country__c = :context.dealerCountry
+					LIMIT 10),
 				Quote (
 						Id, 
 						Name, 
@@ -37,7 +38,8 @@ public with sharing class FcObjectFinder implements IFcObjectFinder {
 						Opportunity.Manage_Deal_For__r.Name,
 						Opportunity.Opp_Partner_Owner__c
 					WHERE Opportunity.RecordType.Name = 'Quote Stage'
-                        AND Opportunity.Customer_Lessee__r.Country__c = :context.dealerCountry)
+                        AND Opportunity.Customer_Lessee__r.Country__c = :context.dealerCountry
+                    LIMIT 10)
 		];
 	} 
 }

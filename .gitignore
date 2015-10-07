@@ -10,6 +10,7 @@ resource-bundles/
 build.properties
 buildx.xml
 config/
+debug/
 salesforce.schema
 target/
 temp/

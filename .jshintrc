@@ -6,7 +6,8 @@
     "require": true,
     "angular": true,
     "$": false,
-    "FcContextControllerExtension": true
+    "FcContextControllerExtension": true,
+    "FcSearchControllerExtension": true
   },
   "bitwise": true,
   "curly": true,

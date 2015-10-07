@@ -29,6 +29,9 @@
 		<members>StandardUserSpecification</members>
 		<members>SystemConstants</members>
 		<members>SystemUtils</members>
+		<members>FcSearchControllerExtension</members>
+		<members>FcObjectFinder</members>
+		<members>IFcObjectFinder</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
